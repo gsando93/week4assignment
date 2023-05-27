@@ -58,13 +58,14 @@ for (int i = 0; i < nameLengths.length; i++) {
 System.out.println();
 System.out.println("The number of characters is " + nameLengthTotal);
 
-	
-//#7 
+	 
 String repeatedWord = multiplyWord("cow",5);
 System.out.println(repeatedWord);
 
 System.out.println(fullNameIs("Marky", "Mark"));
 	}
+	
+	//#7
 public static String multiplyWord(String word,int n) {
 		 
 		String wordRepeated = "";
@@ -78,6 +79,65 @@ public static String multiplyWord(String word,int n) {
 public static String fullNameIs(String firstName, String lastName) {
 	return firstName + " " + lastName;
 }
+
+//#9
+public static boolean checkArraySum(int[] newArray) {
+	int arraySum = 0;
+	for (int i=0; i < newArray.length; i++) {
+		arraySum += newArray[i];
+	}
+	if (arraySum < 100) {
+		return false;
+	} else return true;
+}
+
+//#10
+public static double arrAverage(double[] newArray) {
+	double arrSum = 0;
+	for (int i = 0; i < newArray.length; i++) {
+		arrSum += newArray[i];
+	}
+	double arrayAvg = arrSum / newArray.length;
+	return arrayAvg;
+}
+
+//#11
+public static boolean avgCheck(double[] newArray, double[] arrayTwo) {
+	double arrSumOne = 0;
+	for (int i = 0; i < newArray.length; i++) {
+		arrSumOne += newArray[i];
+	}
+	double arrayAvgOne = arrSumOne / newArray.length;
+	double arrSumTwo = 0;
+	for (int i = 0; i < newArray.length; i++) {
+		arrSumTwo += newArray[i];
+	}
+	double arrayAvgTwo = arrSumTwo / arrayTwo.length;	
+	if (arrayAvgOne > arrayAvgTwo) {
+		return true;
+	} else return false;
+}
+
+//#12
+public static boolean willBuyDrink(boolean isHotOutside, double moneyInPocket) {
+	if (isHotOutside == true && moneyInPocket > 10.50) {
+		return true;
+	} else return false;
+}
+
+//#13 With the rising concerns about how rapidly ai is developing,
+//ai's need a killswitch so that we don't end up
+//in a bit of a pickle like John and Sarah Connor. 
+public static boolean destroyAllHumans(boolean askedNicelyNotTo) {
+	if (askedNicelyNotTo == true) {
+		System.out.println("Hasta la vista, baby.");
+		return false;
+	} else {
+		System.out.println("I'll be back.");
+		return true;
+	}
+}
+
 
 }
 
